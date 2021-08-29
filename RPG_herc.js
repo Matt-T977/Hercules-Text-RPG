@@ -144,6 +144,13 @@ function attack(attacker, defender){
         return encounterOver = false;
     }
 }
+//Health Bar Display
+function healthBar(enemyType, character){
+    let enemyHealth = enemyType.health;
+    let characterHealth = character.health;
+    console.log(`Enemy Health:${enemyHealth}/???`);
+    console.log(`Player Health:${characterHealth}/100`)
+}
 //Encounter Sequence Controller WIP
 function encounterInitiator(encounterCheck, type){
     if (encounterCheck === true){
@@ -161,6 +168,7 @@ function encounterInitiator(encounterCheck, type){
             let enemySuccess = enemyHit(enemyInput);
             if(enemySuccess === true && playerInput !== 3){ 
                 attack(enemyAttack, hercules);
+                healthBar(enemyType, hercules);
             }
             if(enemyType.health <= 0 && hercules.health <= 0){
                 encounterActive = false;
@@ -244,7 +252,7 @@ function narrative(section, part, choice){
             } 
         else if(part === 2){
             alert("Game Over")
-        }
+        } 
     }
     //III. Second Encounter
     else if(section === 3){
