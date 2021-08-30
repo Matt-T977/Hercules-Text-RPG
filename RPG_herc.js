@@ -34,6 +34,16 @@ const lion = {
     special: 50,
     specialName: "Nemean Roar"
 }
+const skeleton = {
+    name: "Skeleton Soldier",
+    health: 50,
+    slash: 5,
+}
+const skeletonCaptain = {
+    name: "Skeleton Captain",
+    health: 100,
+    slash: 10
+}
 ////Character Object Stat Blocks////
 
 
